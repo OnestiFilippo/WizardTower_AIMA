@@ -188,6 +188,7 @@ class WizardTower(Problem):
         state, num_creature, pozione_poss = actState
 
         pos_pozioni = []
+        pos_creature = []
         pos_portale = None
 
         # Calcolo delle posizioni del mago, delle pozioni, delle creature e del portale
@@ -204,7 +205,6 @@ class WizardTower(Problem):
                 (xP, yP) = (i // dim_Y, i % dim_Y)  # posizione del portale
                 pos_portale = (xP, yP)
         
-        num_creature = len(pos_creature)
         num_pozioni = len(pos_pozioni)
 
         # Restituisce la distanza minima tra il mago e le pozioni se il mago non possiede la pozione e se ci sono creature
