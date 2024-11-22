@@ -13,6 +13,8 @@ The problem is set on a 2D grid representing a tower. In this grid:
 - Walls (B) block movement.
 
   ![image](https://github.com/user-attachments/assets/63a3c95e-cee0-455e-a227-08b82534cff2)
+  
+<img src="[drawing.jpg](https://github.com/user-attachments/assets/63a3c95e-cee0-455e-a227-08b82534cff2)" alt="drawing" width="200"/>
 
 
 The wizard’s objective is to:
