@@ -12,6 +12,9 @@ The problem is set on a 2D grid representing a tower. In this grid:
 - A portal (P) represents the final exit point.
 - Walls (B) block movement.
 
+  ![image](https://github.com/user-attachments/assets/63a3c95e-cee0-455e-a227-08b82534cff2)
+
+
 The wizard’s objective is to:
 1.	Collect a potion to be able to defeat a creature.
 2.	Defeat all creatures present in the grid.
