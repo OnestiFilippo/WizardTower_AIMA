@@ -188,7 +188,6 @@ class WizardTower(Problem):
         state, num_creature, pozione_poss = actState
 
         pos_pozioni = []
-        pos_creature = []
         pos_portale = None
 
         # Calcolo delle posizioni del mago, delle pozioni, delle creature e del portale
