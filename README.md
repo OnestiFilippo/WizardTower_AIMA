@@ -24,6 +24,14 @@ The problem is modeled with:
 - Actions: Movement (UP, DOWN, LEFT, RIGHT), potion collection (POTION), and creature defeat (KILL).
 - Costs: Every movement action costs 1 and potion collection and creature defeat cost 0
 
+- ## State Representation ##
+
+The state is represented as a tuple that contains:
+- The grid configuration.
+- The number of remaining creatures.
+- A variable indicating whether the wizard possesses a potion.
+- The accumulated cost (optional).
+
 ## Implemented Solution ##
 
 After testing different searching algorithms like Breadth First, Depth First, Uniform Cost Search, A* Search implemented in the aima-python Python Library, I found that the best solution is obtained with the Best First Search with an heuristic function implemented like:
@@ -34,20 +42,12 @@ After testing different searching algorithms like Breadth First, Depth First, Un
 - if the wizard has a potion, there are creatures left in the grid and there are potions left in the grid:
   ### $D_C+ (C+2)^2 + (M+1)^2$ ###
    where $D_C$ is the minimum Euclidean Distance between the wizard and the creature.
-- if the wizard has not a potion, there are creatures left in the grid:
+- if the wizard has not a potion and there are creatures left in the grid:
   ### $D_C+ (C+2)$ ###
   where $D_C$ is the minimum Euclidean Distance between the wizard and the creature.
 - if there aren't any creature left in the grid:
   ### $D_P$ ###
   where $D_P$ is the Euclidean Distance between the wizard and the portal.
-
-## State Representation ##
-
-The state is represented as a tuple that contains:
-- The grid configuration.
-- The number of remaining creatures.
-- A variable indicating whether the wizard possesses a potion.
-- The accumulated cost (optional).
 
 # Results #
 
