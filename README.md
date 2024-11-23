@@ -44,14 +44,15 @@ After testing different searching algorithms like Breadth First, Depth First, Un
 ## State Representation ##
 
 The state is represented as a tuple that contains:
-	•	The grid configuration.
-	•	The number of remaining creatures.
-	•	A variable indicating whether the wizard possesses a potion.
-	•	The accumulated cost (optional).
+- The grid configuration.
+- The number of remaining creatures.
+- A variable indicating whether the wizard possesses a potion.
+- The accumulated cost (optional).
 
 # Results #
 
 The implemented solution permits to apply different searching algorithms as mentioned before. 
+I tested different algorithms with different heuristic functions until I find the best solution that minimize the parameters on most of the input files given.
 
 ## Breadth First Search ##
 
@@ -98,6 +99,21 @@ The implemented solution permits to apply different searching algorithms as ment
 | _iwt04a.txt_ |             |               |           |
 |  _iwt05.txt_ |             |               |           |
 
+## A* Search ##
+
+|              | **n° Nodi** | **Tempo (s)** | **Costo** |
+|:------------:|:-----------:|:-------------:|:---------:|
+|  _input.txt_ |      94     |     0,002     |     24    |
+|  _iwt01.txt_ |     281     |     0,006     |     32    |
+|  _iwt02.txt_ |     215     |     0,007     |     30    |
+|  _iwt03.txt_ |     491     |     0,028     |     56    |
+| _iwt03a.txt_ |     1503    |     0,235     |    152    |
+| _iwt03b.txt_ |    21513    |     10,665    |    414    |
+| _iwt03c.txt_ |             |               |           |
+|  _iwt04.txt_ |             |               |           |
+| _iwt04a.txt_ |             |               |           |
+|  _iwt05.txt_ |             |               |           |
+
 ## Best First Search ##
 
 |              | **n° Nodi** | **Tempo (s)** | **Costo** |
@@ -112,4 +128,6 @@ The implemented solution permits to apply different searching algorithms as ment
 |  _iwt04.txt_ |    98585    |    232,098    |    3433   |
 | _iwt04a.txt_ |    122795   |    182,115    |    4207   |
 |  _iwt05.txt_ |    191225   |    410,773    |    2976   |
+
+
 
