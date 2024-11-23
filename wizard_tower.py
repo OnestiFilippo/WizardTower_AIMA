@@ -212,7 +212,7 @@ class WizardTower(Problem):
             num_creature = num_creature+1
             num_pozioni = num_pozioni+2
             h = min([math.dist((xM, yM), pos_pozione) for pos_pozione in pos_pozioni])+(num_creature*num_creature)+(num_pozioni*num_pozioni)
-            print(f"A: {h}")
+            #print(f"A: {h}")
             list_h.append(h)
             return h
 
@@ -221,7 +221,7 @@ class WizardTower(Problem):
             num_creature = num_creature+2
             num_pozioni = num_pozioni+1
             h = min([math.dist((xM, yM), pos_creatura) for pos_creatura in pos_creature])+(num_creature*num_creature+num_pozioni*num_pozioni)
-            print(f"B: {h}")
+            #print(f"B: {h}")
             list_h.append(h)
             return h
 
@@ -230,14 +230,14 @@ class WizardTower(Problem):
         elif num_pozioni == 0 and num_creature > 0:
             num_creature = num_creature+2
             h = min([math.dist((xM, yM), pos_creatura) for pos_creatura in pos_creature])+(num_creature)
-            print(f"C: {h}")
+            #print(f"C: {h}")
             list_h.append(h)
             return h
 
         # Restituisce la distanza tra il mago e il portale se non ci sono creature
         elif num_creature == 0:
             h = math.dist((xM, yM), pos_portale)
-            print(f"D: {h}")
+            #print(f"D: {h}")
             list_h.append(h)
             return h
     
@@ -336,6 +336,7 @@ problem.print_state((initial_state, num_creature, 0))
 
 try:
     start_time = time.time()
+    print("Ricerca della soluzione...\n")
 
     #result = astar_search(problem)
     #result = uniform_cost_search(problem)
@@ -344,13 +345,14 @@ try:
     #result = breadth_first_graph_search(problem)
     
     end_time = time.time()
-    print("Nodi esplorati:", counter)
-    print("Tempo di esecuzione:", end_time-start_time)
     if result == None:
         print("Soluzione non trovata")
     else:
-        print("Percorso:", result.solution())
-        print("Costo:", result.path_cost)
+        print("Soluzione trovata:")
+        print(f"Nodi esplorati: {counter}")
+        print(f"Tempo di esecuzione: {end_time-start_time}")
+        print(f"Percorso: {result.solution()}")
+        print(f"Costo: {result.path_cost}")
         if list_h != []:
             create_graph(list_h)
         #executeSolution((initial_state, num_creature, 0), result)
