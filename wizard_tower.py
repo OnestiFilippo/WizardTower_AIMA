@@ -277,10 +277,6 @@ def create_graph(list_h):
     plt.title('Funzione euristica')
     plt.show()
 
-# Calcolo della distanza di Manhattan tra due punti
-def distanza_Manhattan(p1, p2):
-    return abs(p1[0] - p2[0]) + abs(p1[1] - p2[1])
-
 # Lettura del file di input
 def read_file(file):
     dim_X = 0
