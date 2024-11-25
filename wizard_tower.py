@@ -6,7 +6,14 @@ import os
 import math
 
 # Nome del file passato come argomento da riga di comando
-filename = "instances/"+sys.argv[1]
+try:
+    filename = "instances/"+sys.argv[1]
+except IndexError:
+    print("Usage: wizard_tower.py <filename>")
+    print("Examples: ")
+    print("\t - wizard_tower.py input.txt")
+    print("\t - wizard_tower.py iwt01.txt")
+    sys.exit()
 
 # Lista dei valori dell'euristica per il grafico
 list_h = []
