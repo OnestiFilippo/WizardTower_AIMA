@@ -125,9 +125,9 @@ I tested different algorithms with different heuristic functions until I find th
 | _iwt03a.txt_ |     705     |     0.096     |    160    |
 | _iwt03b.txt_ |     4643    |     3.055     |    386    |
 | _iwt03c.txt_ |    17473    |     9.688     |    919    |
-|  _iwt04.txt_ |    98585    |    232.098    |    3433   |
-| _iwt04a.txt_ |    122795   |    182.115    |    4207   |
-|  _iwt05.txt_ |    191225   |    410.773    |    2976   |
+|  _iwt04.txt_ |    98585    |    119.489    |    3433   |
+| _iwt04b.txt_ |    122795   |    101.120    |    4207   |
+|  _iwt05.txt_ |    191225   |    ???        |    2976   |
 
 
 
