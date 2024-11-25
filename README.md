@@ -34,7 +34,7 @@ The state is represented as a tuple that contains:
 
 ## Implemented Solution ##
 
-After testing different searching algorithms like Breadth First, Depth First, Uniform Cost Search, A* Search implemented in the aima-python Python Library, I found that the best solution is obtained with the Best First Search with an heuristic function implemented like:
+After testing different searching algorithms like Breadth First, Depth First, Uniform Cost Search, A* Search implemented in the aima-python Python Library, I found that the best solution is obtained with the **Best First Search** with an heuristic function implemented like:
 
 - if the wizard has not a potion, there are creatures left in the grid and there are potions left in the grid:
   ### <h3>$D_M + (C+1)^2 + (M+2)^2$ ###  
