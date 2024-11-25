@@ -24,7 +24,7 @@ The problem is modeled with:
 - Actions: Movement (UP, DOWN, LEFT, RIGHT), potion collection (POTION), and creature defeat (KILL).
 - Costs: Every movement action costs 1 and potion collection and creature defeat cost 0
 
-- ## State Representation ##
+## State Representation ##
 
 The state is represented as a tuple that contains:
 - The grid configuration.
@@ -32,7 +32,7 @@ The state is represented as a tuple that contains:
 - A variable indicating whether the wizard possesses a potion.
 - The accumulated cost (optional).
 
-## Implemented Solution ##
+# Implemented Solution #
 
 After testing different searching algorithms like Breadth First, Depth First, Uniform Cost Search, A* Search implemented in the aima-python Python Library, I found that the best solution is obtained with the **Best First Search** with an heuristic function implemented like:
 
