@@ -4,9 +4,24 @@ from search import Problem, astar_search, depth_first_graph_search, best_first_g
 import time
 import os
 import math
+import argparse
+
+parser = argparse.ArgumentParser(description='Wizard Tower')
+parser.add_argument('filename', type=str, help='Nome del file di input')
+parser.add_argument('-e', action='store_true', help='Esegue la soluzione trovata')
+parser.add_argument('-g', action='store_true', help='Mostra il grafico dell\'euristica')
+
+args = parser.parse_args()
+
+filename = "instances/"+args.filename
+execute = args.e
+showGraph = args.g
+
+print(execute)
+print(showGraph)
 
 # Nome del file passato come argomento da riga di comando
-try:
+"""try:
     filename = "instances/"+sys.argv[1]
 except IndexError:
     print("Usage: wizard_tower.py <filename>")
@@ -14,7 +29,7 @@ except IndexError:
     print("\t - wizard_tower.py input.txt")
     print("\t - wizard_tower.py iwt01.txt")
     sys.exit()
-
+"""
 # Lista dei valori dell'euristica per il grafico
 list_h = []
 
@@ -317,7 +332,6 @@ def read_file(file):
 def executeSolution(initialState, result):
     state = initialState
     for action in result.solution():
-        os.system('clear')
         state = problem.result(state, action)
         problem.print_state(state)
         time.sleep(0.3)
@@ -356,13 +370,15 @@ try:
     else:
         print("Soluzione trovata:")
         print("Fine:", time.strftime("%H:%M:%S", time.localtime(end_time)))
-        print(f"Nodi esplorati: {counter}")
+        nodi_esplorati = counter
+        if execute == True:
+            executeSolution((initial_state, num_creature, 0), result)
+        print(f"Nodi esplorati: {nodi_esplorati}")
         print(f"Tempo di esecuzione: {end_time-start_time}")
         print(f"Percorso: {result.solution()}")
         print(f"Costo: {result.path_cost}")
-        if list_h != []:
+        if list_h != [] and showGraph == True:
             create_graph(list_h)
-        #executeSolution((initial_state, num_creature, 0), result)
 except KeyboardInterrupt:
     print("Numero di nodi esplorati prima dell'uscita:", counter)
     sys.exit()
