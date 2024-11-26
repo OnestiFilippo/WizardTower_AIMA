@@ -50,15 +50,15 @@ options:
 
 ## Parameters ##
 
-- **filename**
+**filename**
 
 Specifies the name of the input file inside the *instances/* folder.
 
-- **-e**
+**-e**
 
 View the execution of the solution found.
 
-- **-g** 
+**-g** 
 
 View the heuristic function graph.
 
