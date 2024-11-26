@@ -115,6 +115,7 @@ I tested different algorithms with different heuristic functions until I find th
 | _iwt04.txt_  |             |               |           |
 | _iwt04a.txt_ |             |               |           |
 | _iwt05.txt_  |             |               |           |
+| _iwt05b.txt_ |             |               |           |
 
 ## Depth First Search ##
 
@@ -130,6 +131,7 @@ I tested different algorithms with different heuristic functions until I find th
 |  _iwt04.txt_ |             |               |           |
 | _iwt04a.txt_ |             |               |           |
 |  _iwt05.txt_ |             |               |           |
+| _iwt05b.txt_ |             |               |           |
 
 ## Uniform Cost Search ##
 
@@ -145,6 +147,7 @@ I tested different algorithms with different heuristic functions until I find th
 |  _iwt04.txt_ |             |               |           |
 | _iwt04a.txt_ |             |               |           |
 |  _iwt05.txt_ |             |               |           |
+| _iwt05b.txt_ |             |               |           |
 
 ## A* Search ##
 
@@ -160,6 +163,7 @@ I tested different algorithms with different heuristic functions until I find th
 |  _iwt04.txt_ |             |               |           |
 | _iwt04a.txt_ |             |               |           |
 |  _iwt05.txt_ |             |               |           |
+| _iwt05b.txt_ |             |               |           |
 
 ## Best First Search ##
 
@@ -175,3 +179,5 @@ I tested different algorithms with different heuristic functions until I find th
 |  _iwt04.txt_ |    98585    |    119.489    |    3433   |
 | _iwt04b.txt_ |    122795   |    101.120    |    4207   |
 |  _iwt05.txt_ |    191225   |    222.373    |    2976   |
+| _iwt05b.txt_ |    50590    |     36.212    |    3272   |
+
