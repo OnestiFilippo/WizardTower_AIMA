@@ -103,12 +103,12 @@ I tested different algorithms with different heuristic functions until I find th
 
 |              | **n° Nodi** | **Tempo (s)** | **Costo** |
 |:------------:|:-----------:|:-------------:|:---------:|
-|  _input.txt_ |      94     |     0.002     |     24    |
-|  _iwt01.txt_ |     281     |     0.006     |     32    |
-|  _iwt02.txt_ |     215     |     0.007     |     30    |
-|  _iwt03.txt_ |     491     |     0.028     |     56    |
-| _iwt03a.txt_ |     1503    |     0.235     |    152    |
-| _iwt03b.txt_ |    21513    |     10.665    |    414    |
+|  _input.txt_ |      94     |     0.001     |     24    |
+|  _iwt01.txt_ |     281     |     0.003     |     32    |
+|  _iwt02.txt_ |     215     |     0.005     |     30    |
+|  _iwt03.txt_ |     491     |     0.016     |     56    |
+| _iwt03a.txt_ |     1503    |     0.131     |    152    |
+| _iwt03b.txt_ |    21513    |     6.098     |    414    |
 | _iwt03c.txt_ |             |               |           |
 |  _iwt04.txt_ |             |               |           |
 | _iwt04a.txt_ |             |               |           |
@@ -123,11 +123,11 @@ I tested different algorithms with different heuristic functions until I find th
 |  _iwt02.txt_ |     130     |     0.005     |     30    |
 |  _iwt03.txt_ |     269     |     0.015     |     58    |
 | _iwt03a.txt_ |     705     |     0.096     |    160    |
-| _iwt03b.txt_ |     4643    |     3.055     |    386    |
+| _iwt03b.txt_ |     4643    |     1.549     |    386    |
 | _iwt03c.txt_ |    17473    |     9.688     |    919    |
 |  _iwt04.txt_ |    98585    |    119.489    |    3433   |
 | _iwt04b.txt_ |    122795   |    101.120    |    4207   |
-|  _iwt05.txt_ |    191225   |    ???        |    2976   |
+|  _iwt05.txt_ |    191225   |    222.373    |    2976   |
 
 
 
