@@ -6,6 +6,7 @@ import os
 import math
 import argparse
 
+# Parsing degli argomenti da riga di comando
 parser = argparse.ArgumentParser(description='Wizard Tower')
 parser.add_argument('filename', type=str, help='Nome del file di input')
 parser.add_argument('-e', action='store_true', help='Esegue la soluzione trovata')
@@ -13,23 +14,11 @@ parser.add_argument('-g', action='store_true', help='Mostra il grafico dell\'eur
 
 args = parser.parse_args()
 
+# Nome del file passato come argomento da riga di comando
 filename = "instances/"+args.filename
 execute = args.e
 showGraph = args.g
 
-print(execute)
-print(showGraph)
-
-# Nome del file passato come argomento da riga di comando
-"""try:
-    filename = "instances/"+sys.argv[1]
-except IndexError:
-    print("Usage: wizard_tower.py <filename>")
-    print("Examples: ")
-    print("\t - wizard_tower.py input.txt")
-    print("\t - wizard_tower.py iwt01.txt")
-    sys.exit()
-"""
 # Lista dei valori dell'euristica per il grafico
 list_h = []
 
