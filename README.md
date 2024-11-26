@@ -32,6 +32,53 @@ The state is represented as a tuple that contains:
 - A variable indicating whether the wizard possesses a potion.
 - The accumulated cost (optional).
 
+# Python Script Usage #
+
+The *wizard_tower.py* script provides functionality for solving and visualizing the solution of the problem. The usage of this script is:
+
+```
+usage: wizard_tower.py [-h] [-e] [-g] filename
+
+positional arguments:
+  filename    Name of the input file
+
+options:
+  -h, --help  Show this help message and exit
+  -e          Execute the solution found
+  -g          Display the heuristic graph
+```
+
+## Parameters ##
+
+- **filename**
+
+Specifies the name of the input file inside the *instances/* folder.
+
+- **-e**
+
+View the execution of the solution found.
+
+- **-g** 
+
+View the heuristic function graph.
+
+## Examples ##
+
+Running the script on the input.txt file without displaying the graph and without displaying the solution.
+```
+python3 wizard_tower.py input.txt
+```
+
+Running the script on the input.txt file and displaying the heuristic graph.
+```
+python3 wizard_tower.py -g input.txt
+```
+
+Running the script on the input.txt file and displaying the solution found and the heuristic graph.
+```
+python3 wizard_tower.py -e -g input.txt
+```
+
 # Implemented Solution #
 
 After testing different searching algorithms like Breadth First, Depth First, Uniform Cost Search, A* Search implemented in the aima-python Python Library, I found that the best solution is obtained with the **Best First Search** with an heuristic function implemented like:
@@ -128,8 +175,3 @@ I tested different algorithms with different heuristic functions until I find th
 |  _iwt04.txt_ |    98585    |    119.489    |    3433   |
 | _iwt04b.txt_ |    122795   |    101.120    |    4207   |
 |  _iwt05.txt_ |    191225   |    222.373    |    2976   |
-
-# Python Script Usage #
-
-...
-
