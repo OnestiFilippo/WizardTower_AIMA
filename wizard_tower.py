@@ -1,6 +1,6 @@
 import sys
 import matplotlib.pyplot as plt
-from search import Problem, astar_search, depth_first_graph_search, best_first_graph_search, uniform_cost_search, breadth_first_graph_search
+from search import Problem, astar_search, depth_first_graph_search, best_first_graph_search, uniform_cost_search, breadth_first_graph_search, greedy_best_first_graph_search
 import time
 import os
 import math
@@ -339,19 +339,23 @@ problem.print_state((initial_state, num_creature, 0))
 
 try:
     start_time = time.time()
+    print("Inizio:", time.strftime("%H:%M:%S", time.localtime(start_time)))
     print("Ricerca della soluzione...\n")
 
     #result = astar_search(problem)
     #result = uniform_cost_search(problem)
-    result = best_first_graph_search(problem, problem.h)
+    #result = best_first_graph_search(problem, problem.h)
+    result = greedy_best_first_graph_search(problem, problem.h)
     #result = depth_first_graph_search(problem)
     #result = breadth_first_graph_search(problem)
     
     end_time = time.time()
+    
     if result == None:
         print("Soluzione non trovata")
     else:
         print("Soluzione trovata:")
+        print("Fine:", time.strftime("%H:%M:%S", time.localtime(end_time)))
         print(f"Nodi esplorati: {counter}")
         print(f"Tempo di esecuzione: {end_time-start_time}")
         print(f"Percorso: {result.solution()}")
