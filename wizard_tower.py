@@ -259,7 +259,7 @@ class WizardTower(Problem):
         for i in range(0, len(state)):
             if i % dim_Y == 0:
                 print()
-            print(state[i], end="  ")
+            print(state[i], end=" ")
         print()
 
         # Calcolo la posizione del mago che può essere X, XM, XP o XC
